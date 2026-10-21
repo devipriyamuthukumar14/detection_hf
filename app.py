@@ -51,7 +51,7 @@ APP_DIR = Path(__file__).parent
 
 with st.sidebar:
 
-    st.header("⚙️ Settings")
+    st.header("Waste Detection")
 
     weights_path = st.text_input(
         "Model file",
@@ -158,13 +158,13 @@ except Exception as e:
 # DISPLAY ORIGINAL IMAGE
 # ============================================================
 
-with st.expander("📷 View Uploaded Image"):
+#with st.expander("📷 View Uploaded Image"):
 
-    st.image(
-        pil_image,
-        caption="Uploaded Image",
-        use_container_width=True,
-    )
+    #st.image(
+        #pil_image,
+        #caption="Uploaded Image",
+        #use_container_width=True,
+    #)
 
 
 # ============================================================
@@ -442,33 +442,6 @@ if detail_rows:
         hide_index=True,
     )
 
-
-# ============================================================
-# CATEGORY BREAKDOWN
-# ============================================================
-
-st.subheader("📈 Category Breakdown")
-
-if parent_counts:
-
-    category_rows = []
-
-    for category, count in parent_counts.items():
-
-        category_rows.append(
-            {
-                "Category": category,
-                "Number of Objects": count,
-            }
-        )
-
-    category_df = pd.DataFrame(category_rows)
-
-    st.dataframe(
-        category_df,
-        use_container_width=True,
-        hide_index=True,
-    )
 
 
 # ============================================================
