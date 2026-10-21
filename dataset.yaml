@@ -1,0 +1,20 @@
+path: /content/waste_project/dataset
+train: images/train
+val: images/val
+test: images/test
+names:
+  0: bottle_cap_lid
+  1: cigarette_butt
+  2: ewaste_device
+  3: food_waste
+  4: glass_bottle
+  5: medical_sanitary
+  6: metal_can
+  7: metal_scrap_foil
+  8: other_litter
+  9: paper_cardboard
+  10: plastic_bag_wrapper
+  11: plastic_bottle
+  12: plastic_container
+  13: plastic_cup_straw
+  14: plastic_other
